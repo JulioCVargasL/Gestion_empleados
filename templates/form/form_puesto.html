@@ -1,0 +1,15 @@
+<form action="" method="get">
+  <label for="nombre">Nombre del puesto de trabajo</label>
+  <input type="text" name="nombre">
+  <label for="descripcion">Descripcion</label>
+  <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+
+  <label for="">Salarios</label>
+  <select name="" id="">
+    <!-- Aqui debemos tener un ciclo FOR que nos permita recorrer los salarios guardados en la base de datos y qeu se generen las opciones en un desplegable  -->
+    {% for sal in salario %}
+    <option value="{{sal.id}}">{{sal.valor_bruto}}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Guardar</button>
+</form>
