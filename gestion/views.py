@@ -28,8 +28,8 @@ def saveSalario(request):
   return HttpResponse("Salario Creado")
 
 def puesto(request):
- salario = Salarios.objects.all()
- return render(request, 'puesto.html', {'salario': Salarios})
+ salarios = Salarios.objects.all()
+ return render(request, 'puesto.html', {'salarios': salarios})
 
 def savePuesto(request):
   nombrePuesto  = request.POST['nombre_pu']

@@ -8,7 +8,7 @@
   <label for="">Salarios</label>
   <select name="" id="">
     <!-- Aqui debemos tener un ciclo FOR que nos permita recorrer los salarios guardados en la base de datos y qeu se generen las opciones en un desplegable  -->
-    {% for sal in salario %}
+    {% for sal in salarios %}
     <option value="{{sal.id}}">{{sal.valor_bruto}}</option>
     {% endfor %}
   </select>

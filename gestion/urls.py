@@ -6,7 +6,7 @@ urlpatterns = [
     path('salario/',       views.salario,      name="salario"),
     path('saveSalario/',  views.saveSalario,  name="saveSalario"),
     path('puesto/',       views.puesto,       name="puesto"),
-    # path('savePuesto/',   views.savePuesto,   name="savePuesto"),
+    path('savePuesto/',   views.savePuesto,   name="savePuesto"),
 
 ]
 
