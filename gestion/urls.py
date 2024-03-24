@@ -1,10 +1,12 @@
 from django.urls import path
-# form . import views
+from . import views
 
-# urlpatterns = [
-#     path('',views.inicio, name='tablas'),
-#     path('', views.index),
-#     path('save/', views.save, name='')
+urlpatterns = [
+    path('',              views.index,        name="inicio"),
+    path('salario/',       views.salario,      name="salario"),
+    path('saveSalario/',  views.saveSalario,  name="saveSalario"),
+    path('puesto/',       views.puesto,       name="puesto"),
+    # path('savePuesto/',   views.savePuesto,   name="savePuesto"),
 
-# ]
+]
 

@@ -3,11 +3,12 @@ from django.db import models
 # Create your models here.
 
 class Salarios(models.Model):
-  valor_bruto = models.CharField(max_length=30)
+  valor_bruto = models.IntegerField()
   extra_dec = models.BooleanField(default=False)
   extra_jun = models.BooleanField(default=False)
 
 class Puesto_trabajo(models.Model):
+  nombre_pu = models.CharField(max_length=30)
   descripcion = models.TextField()
   salarios = models.ForeignKey(Salarios, on_delete=models.CASCADE)
 
@@ -21,12 +22,12 @@ class Poblacion(models.Model):
 class Fabricas(models.Model):
   nombre_fab = models.CharField(max_length=30)
   direccion = models.CharField(max_length=30)
-  codigo_postal = models.CharField(max_length=20)
+  codigo_postal = models.IntegerField()
   poblacion = models.ForeignKey(Poblacion, on_delete=models.CASCADE)
 
 class Empleados(models.Model):
   nombre_em = models.CharField(max_length=30)
-  documento = models.CharField(max_length=30)
+  documento = models.IntegerField()
   email = models.EmailField()
   direccion_em = models.CharField(max_length=30)
   puesto = models.ForeignKey(Puesto_trabajo, on_delete=models.CASCADE)

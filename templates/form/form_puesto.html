@@ -1,4 +1,5 @@
-<form action="" method="get">
+<form action="{% url 'savePuesto' %}" method="post">
+  {% csrf_token %}
   <label for="nombre">Nombre del puesto de trabajo</label>
   <input type="text" name="nombre">
   <label for="descripcion">Descripcion</label>

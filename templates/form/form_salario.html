@@ -1,11 +1,14 @@
-<form action="{% url 'save' %}" metod="get">
+<form action="{% url 'saveSalario' %}" method="post">
+  <!-- El token debe agregarse cada ves que usemos el metodo POST -->
+  {% csrf_token %}
   <input type="text" name="valor_bruto" placeholder="Ingresal el valor">
   <label for="Extra_dec">
     Bono Diciembre
-    <input type="checkbox" name="extra_dec" id="" extra_dec>
+    <input type="checkbox" name="extra_dec" id="extra_dec">
   </label>
   <label for="Extra_jun">
-    Bono Diciembre
-    <input type="checkbox" name="extra_jun" id="" extra_jun>
+    Bono Junio
+    <input type="checkbox" name="extra_jun" id="extra_jun">
   </label>
+  <button type="submit">Guardar</button>
 </form>
